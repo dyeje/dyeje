@@ -1,0 +1,22 @@
+link(rel='stylesheet', href='css/styles.css')
+link(rel='stylesheet', href='css/navbar.css')
+include ./github-link.pug
+block nav
+
+html
+  head
+    title dyeje
+  body
+    div.container
+      h1 dyeje
+
+      ul.navbar
+        li
+          a(href="/" class=(about ? "active" : "")) About
+        li
+          a(href="./portfolio.html" class=(portfolio ? "active" : "")) Portfolio
+
+      div.content
+        block content
+
+      div.footer

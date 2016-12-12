@@ -1,0 +1,25 @@
+extends ./layout.pug
+
+block nav
+  - about = true
+
+block content
+  p Hi, I'm Jeremy Dye. 
+  p I like to make things.
+
+  div
+    a.link(href="mailto:dyeje@mail.gvsu.edu")
+      img.logo(src="icons/email.ico")
+      span.align Email
+
+  div
+    a.link(href="/resume.pdf" download="dyejeResume")
+      img.logo(src="icons/pdf.png")
+      span.align Resume
+
+  +githubLink("http://www.github.com/dyeje", "GitHub")
+  
+  div
+    a.link(href="https://www.linkedin.com/in/dyeje" target="_blank")
+      img.logo(src="icons/linkedin.png")
+      span.align LinkedIn

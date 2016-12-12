@@ -1,0 +1,24 @@
+extends ./layout.pug
+
+block nav
+  - portfolio = true
+
+block content
+  div.professional
+    h2 Professional Projects
+    p I've worked on a few products throughout my career. If you'd like to know more about them, shoot me an email!
+
+  div.surrounded
+    h2 surrounded
+    +githubLink("https://github.com/dyeje/surrounded", "View it on GitHub")
+    p Surrounded is an HTML5 Canvas game inspired by an old flash game that I played as a kid. It's the first video game I've made. I had a lot of fun building it and it was a great learning experience. One of the goals was to not have any dependencies, so it's built with plain old JavaScript.
+
+  div.sw-dice-roller
+    h2 swDiceRoller
+    +githubLink("https://github.com/dyeje/swDiceRoller", "View it on GitHub")
+    p I play Edge of the Empire. It's a tabletop game that uses a unique dice system. I decided to whip up a dice roller to help folks when they're short on dice.
+
+  div.dyeje
+    h2 dyeje Website
+    +githubLink("https://github.com/dyeje/dyeje", "View it on GitHub")
+    p This site is a simple node.js server.  It was fun to make an elegant, little webserver and dip my feet into AWS.
