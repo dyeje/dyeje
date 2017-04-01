@@ -1,12 +1,26 @@
 'use strict';
 
 var gulp = require('gulp');
+var sass = require('gulp-sass');
 var pug = require('gulp-pug');
+var concatCss = require('gulp-concat-css');
 
-gulp.task('default', ['pug']);
+gulp.task('default', ['sass', 'pug']);
 
-gulp.task('pug', function () {
-  return gulp.src(['views/about.pug', 'views/portfolio.pug'])
+gulp.task('pug', function buildHTML() {
+  return gulp.src('markup/*.pug')
     .pipe(pug({}))
-    .pipe(gulp.dest('./public'))
+    .pipe(gulp.dest('out/'))
+});
+
+gulp.task('sass', function () {
+  return gulp.src('styles/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(concatCss("site.css"))
+    .pipe(gulp.dest('out/'));
+});
+
+gulp.task('watch', function () {
+  gulp.watch('markup/index.pug', ['pug']);
+  gulp.watch('styles/*.scss', ['sass']);
 });
