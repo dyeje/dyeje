@@ -4,6 +4,12 @@
   margin: auto;
 }
 
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 80%;
+  }
+}
+
 .content {
   padding-top: 30px;
   font-family: "Helvetica", "Arial", sans-serif;
