@@ -4,21 +4,27 @@ block nav
   - portfolio = true
 
 block content
-  div.professional
-    h2 Professional Projects
-    p I've worked on a few products throughout my career. If you'd like to know more about them, shoot me an email!
+  div
+    h2 SelectStar
+    +iconLink("https://selectstar.io", 'assets/arrow.jpeg', "Check it Out")
+    p SelectStar is SaaS database monitoring platform that allows you to keep track of all your databases (RDBMS, NoSQL, distributed, etc) in one spot. I work on this full time at Blue Medora currently.
+    img.screenshot(src='assets/selectstar_screenshot.png')
 
-  div.surrounded
+  div
     h2 surrounded
-    +githubLink("https://github.com/dyeje/surrounded", "View it on GitHub")
-    p Surrounded is an HTML5 Canvas game inspired by an old flash game that I played as a kid. It's the first video game I've made. I had a lot of fun building it and it was a great learning experience. One of the goals was to not have any dependencies, so it's built with plain old JavaScript.
+    +iconLink("/surrounded", 'assets/arrow.jpeg', "Check it Out")
+    +iconLink("https://github.com/dyeje/surrounded", "assets/github.png", "View it on GitHub")
+    p I used to play where you eat enemies to get bigger. Once I mastered the game, I wanted a harder version of it. So I made this game. I had a lot of fun building it and designing it. One of the goals was to not have any dependencies, so it's built with plain old JavaScript. I used SonicPi to program the music in Ruby.
+    img.screenshot(src='assets/surrounded_screenshot.png')
 
-  div.sw-dice-roller
+  div
     h2 swDiceRoller
-    +githubLink("https://github.com/dyeje/swDiceRoller", "View it on GitHub")
-    p I play Edge of the Empire. It's a tabletop game that uses a unique dice system. I decided to whip up a dice roller to help folks when they're short on dice.
+    +iconLink("/swDiceRoller", 'assets/arrow.jpeg', "Check it Out")
+    +iconLink("https://github.com/dyeje/swDiceRoller", "assets/github.png", "View it on GitHub")
+    p I play the tabletop game Edge of the Empire. It uses a unique dice sysstem. I decided to whip up a little app to roll the dice because it sounded fun. It comes in handy when you forget your dice or are trying to play with an online group.
+    img.screenshot(src='assets/swdiceroller_screenshot.png')
 
-  div.dyeje
+  div
     h2 dyeje Website
-    +githubLink("https://github.com/dyeje/dyeje", "View it on GitHub")
-    p This is a simple static site hosted on S3.  I used the Pug templates and Gulp to keep the code DRY and pretty.  It used to be a simple node server (which you can also find on my GitHub), but I ran out of free EC2 credits.
+    +iconLink("https://github.com/dyeje/dyeje", "assets/github.png", "View it on GitHub")
+    p This is a static site hosted on S3. It uses Pug for templating, Sass for CSS, and Gulp for building. It used to be a tiny node server (which you can also find on my GitHub), but I ran out of free EC2 credits and decided to save some cash by converting it to static.

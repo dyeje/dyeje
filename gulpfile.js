@@ -21,6 +21,6 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('markup/index.pug', ['pug']);
+  gulp.watch('markup/*.pug', ['pug']);
   gulp.watch('styles/*.scss', ['sass']);
 });

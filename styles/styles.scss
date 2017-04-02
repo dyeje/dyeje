@@ -27,14 +27,11 @@
   margin-right: 3px;
 }
 
-.img-container {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.portfolio-img {
+.screenshot {
+  display: block;
   width: 100%;
+  max-width: 800px;
+  margin: auto;
 }
 
 .footer {
