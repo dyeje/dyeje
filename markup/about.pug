@@ -4,18 +4,19 @@ block nav
   - about = true
 
 block content
-  p Hi, I'm Jeremy Dye.
-  p I like to make things.
+  p Hi, I'm Jeremy.
+  p I'm a full stack web developer. I've built stuff with Ruby / Rails, node.js, JavaScript, HTML, SCSS, jQuery, React, AWS, and bunch of other tech.
+  p I also do other stuff like rockclimb, play music, and theorize endlessly about TV shows.
 
-  +iconLink("mailto:dyeje@mail.gvsu.edu", "assets/email.png", "Email")
+  .link-container.home
+    +iconLink("mailto:dyeje@mail.gvsu.edu", "fa-envelope", "Email")
 
-  a.link(href="/resume.pdf" download="dyejeResume")
-    img.logo(src="assets/pdf.png")
-    span.align Resume
+    a.link(href="/resume.pdf" download="dyejeResume")
+      i.fas.fa-file-pdf
+      span.link-text Resume
 
-  +iconLink("http://www.github.com/dyeje", 'assets/github.png', "GitHub")
+    +iconLink("http://www.github.com/dyeje", "fa-github", "GitHub")
 
-  div
     a.link(href="https://www.linkedin.com/in/dyeje" target="_blank")
-      img.logo(src="assets/linkedin.png")
-      span.align LinkedIn
+      i.fas.fa-linkedin
+      span.link-text LinkedIn
